@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "Bid";
+		Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" type="text/css" href="~/Content/bootstrap/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="~/Content/bootstrap/css/bootstrap.min.css" />
+
+<script type="text/javascript" src="~/Content/jquery/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="~/Content/bootstrap/js/bootstrap.min.js"></script>
+
+<html>
+<body>
+
+	<form method="post" id="form1" action="/LoginndSignup/SaveBid" enctype="multipart/form-data">
+		<div class="container">
+			<h1></h1>
+			<h2 class="section-heading">Create A Free Client Account</h2>
+			@*<h3 class="section-subheading text-muted">Create An Account</h3>*@
+			<div class="row">
+				<div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+					<form role="form">
+						<h2>Bid For Job <small></small></h2>
+						<hr class="colorgraph">
+						<div class="row">
+
+							<div class="form-group">
+								<input type="text" name="rJname" id="first_name" class="form-control input-lg" required placeholder="Enter Job Name" tabindex="1">
+
+							</div>
+
+							<div class="form-group">
+								<input type="text" name="rName" id="last_name" class="form-control input-lg" required placeholder="Your Display Name" tabindex="2">
+							</div>
+
+							<div class="form-group">
+								<input type="text" name="rRate" id="display_name" class="form-control input-lg" required placeholder="Your rate that you offers if same typr 'Same'" tabindex="3">
+							</div>
+							<div class="form-group">
+								<input type="text" name="rDuration" id="email" class="form-control input-lg" placeholder="Your Duration that you offers if same typr 'Same'" required tabindex="4">
+							</div>
+
+
+							<div class="form-group">
+
+								<input type="text" name="rDiscription" id="password" class="form-control input-lg" placeholder="Discription Of Job / Any Messeage" required tabindex="5">
+
+							</div>
+
+							<div class="row">
+								<div class="col-xs-12 col-sm-6 col-md-6">
+
+									<div>
+										<input type="submit" value="Bid" onclick="	Success" class="btn btn-success btn-block btn-lg" tabindex="7">
+									</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+	</form>
+
+
+
+	</body>
+
+</html>

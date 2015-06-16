@@ -1,0 +1,166 @@
+﻿@using fViews.Models
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+	<link rel="stylesheet" type="text/css" href="~/Content/bootstrap/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="~/Content/bootstrap/css/bootstrap.min.css" />
+
+	<script type="text/javascript" src="~/Content/jquery/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="~/Content/bootstrap/js/bootstrap.min.js"></script>
+
+
+	@*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!-- Custom CSS -->
+		<link href="css/agency.css" rel="stylesheet">
+		<!-- Custom Fonts -->
+		<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+		<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+				<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+				<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->*@
+
+	@{
+		Client c = (Client)Session["mySession"];
+		if (c == null)
+		{
+			c = new Client();
+			c.cDname = "";
+		}
+	}
+
+
+	@{
+		Lancer l = (Lancer)Session["mySession1"];
+		if (l == null)
+		{
+			l = new Lancer();
+			l.lDname = "";
+		}
+	}
+
+	<body id="page-top" class="index">
+		<!-- Navigation -->
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header page-scroll">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand page-scroll" href="/Home/Index">Lancerz</a>
+					@*@Html.ActionLink("Lancerz", "Home" ,"Index")*@
+					<form class="navbar-form navbar-left"  action="/Admin/Search" role="search">
+						<div class="form-group" >
+							<input type="text" name="cDname" class="form-control" placeholder="Find Freelancerz">
+						</div>
+						<button type="submit" class="btn btn-default">Submit</button>
+					</form>
+
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="hidden">
+							<a href="#page-top"></a>
+						</li>
+						<li>
+							<a class="page-scroll" href="/BrowsendProfiles/Browse">@c.cDname</a>
+							
+						</li>
+
+						<li>
+							<a class="page-scroll" href="/BrowsendProfiles/Browse">@l.lDname</a>
+
+						</li>
+
+						<li>
+							
+							<a class="page-scroll" href="/BrowsendProfiles/Browse">Browse</a>
+						</li>
+
+
+
+
+
+						<li>
+							<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
+								<mark class="text-primary">
+									Login
+								</mark><span class="caret"></span>
+							</button>
+
+
+							<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+								<li role="presentation"><a role="menuitem" tabindex="-1" href="/LoginndSignup/LoginLancer"><mark class="text-primary">Lancer</mark></a></li>
+								<li role="presentation"><a role="menuitem" tabindex="-1" href="/LoginndSignup/Login"><mark class="text-primary">Client</mark></a></li>
+
+
+							</ul>
+
+							@*<a class="page-scroll" href="/LoginndSignup/Login">Login</a>*@
+						</li>
+						<li>
+
+							<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
+							<mark class="text-primary">	Register
+								</mark><span class="caret"></span>
+							</button>
+
+
+							<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+								<li role="presentation"><a role="menuitem" tabindex="-1" href="/LoginndSignup/SignupLancer"><mark class="text-primary">Lancer</mark></a></li>
+								<li role="presentation"><a role="menuitem" tabindex="-1" href="/LoginndSignup/Signup"><mark class="text-primary">Client</mark></a></li>
+								
+								
+							</ul>
+
+
+
+							@*<a class="page-scroll" href="/LoginndSignup/Signup">Sign up</a>*@
+						</li>
+
+						<li>
+							<a class="page-scroll" href="/Admin/AdminLogin">Admin</a>
+						</li>
+						<li>
+</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+		<link href="~/Content/Style.css" rel="stylesheet" />
+
+
+
+		@RenderBody()
+
+		@Scripts.Render("~/bundles/jquery")
+		@RenderSection("scripts", required: false)
+	</body>
+</html>

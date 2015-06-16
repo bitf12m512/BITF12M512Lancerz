@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Test";
+}
+
+<h2>Test</h2>
+
+@foreach(var data in ViewData.Model )
+{
+	<li> @(data.cFname)</li>
+	<li> @(data.cLname)</li>
+	<li> @(data.cDname)</li>
+	<li> @(data.eId)</li>
+
+	<label>Upload Picture</label>
+	<input type="file" name="picture" />
+}

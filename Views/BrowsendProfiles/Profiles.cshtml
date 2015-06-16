@@ -1,0 +1,115 @@
+﻿@{
+    ViewBag.Title = "Profiles";
+		Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using fViews.Models;
+<link rel="stylesheet" type="text/css" href="~/Content/bootstrap/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="~/Content/bootstrap/css/bootstrap.min.css" />
+
+<script type="text/javascript" src="~/Content/jquery/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="~/Content/bootstrap/js/bootstrap.min.js"></script>
+
+
+@*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- Custom CSS -->
+	<link href="css/agency.css" rel="stylesheet">
+	<!-- Custom Fonts -->
+	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+	<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->*@
+
+<html>
+<body>
+
+
+
+
+
+
+
+
+
+	@*<img src="~/img/dp.jpg" name="aboutme" width="140" height="140" />*@
+	@foreach (Lancer data in ViewData.Model)
+	{
+
+		<div class="row">
+			<br>
+			<br>
+			<div class="span3 well">
+
+				<div class="col-md-offset-1">
+					<div class="container">
+						<img src="~/Files/@(data.path)" name="aboutme" width="140" height="140" />
+						<h3>Name  : @(data.lDname)</h3>
+						<span><strong>Skills: </strong></span>
+						<span class="label label-warning">@(data.details)</span>
+						<span class="label label-info">Adobe CS 5.5</span>
+						<span class="label label-info">Microsoft Office</span>
+						<span class="label label-success">Windows XP, Vista, 7</span>
+						<div>
+							<ul>
+								<li>
+									<strong>Country Name  : 	@(data.country)</strong>
+								</li>
+							</ul>
+
+							<ul>
+								<li>
+									<strong>Rate/Hour     :	@(data.rate)</strong>
+								</li>
+							</ul>
+
+							<ul>
+								<li>
+									<strong>Catagory      :	@(data.skills)</strong>
+								</li>
+							</ul>
+
+							<ul>
+								<li>
+									<strong>Contact Number :	@(data.contactno)</strong>
+								</li>
+							</ul>
+
+							<ul>
+								<li>
+									<strong>Email Address :	@(data.eid)</strong>
+								</li>
+							</ul>
+
+							<p> SharePoint Administrator, Designer & Trainer Specialization in: - SharePoint Server 2013/2010/2007 - InfoPath 2013/2010/2007 - Project Management - WSS & MOSS - Custom Workflows - Custom..</p>
+
+
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+
+	}
+
+
+
+</body>
+
+</html>

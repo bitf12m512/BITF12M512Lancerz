@@ -1,0 +1,170 @@
+﻿@model fViews.Models.Sender
+
+@{
+    ViewBag.Title = "SignupLancer";
+		Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<body id="page-top" class="index" background="~/img/com.jpg">
+
+
+	
+
+		
+
+			<form method="post" id="form1" action="/LoginndSignup/AddLancer" enctype="multipart/form-data">
+				<div class="container">
+					<h1></h1>
+					<h2 class="section-heading">Create A Free Client Account</h2>
+					<h3 class="section-subheading text-muted">Create An Account</h3>
+					<div class="row">
+						<div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+							<form role="form">
+								<h2>Please Sign Up <small>It's free and always will be.</small></h2>
+								<hr class="colorgraph">
+								<div class="row">
+									<div class="col-xs-12 col-sm-6 col-md-6">
+										<div class="form-group">
+											<input type="text" name="lFname" id="first_name" class="form-control input-lg" required placeholder="First Name" tabindex="1">
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-6 col-md-6">
+										<div class="form-group">
+											<input type="text" name="lLname" id="last_name" class="form-control input-lg" required placeholder="Last Name" tabindex="2">
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<input type="text" name="lDname" id="display_name" class="form-control input-lg" required placeholder="Display Name" tabindex="3">
+								</div>
+								<div class="form-group">
+									<input type="text" name="eId" id="email" class="form-control input-lg" placeholder="Email Address" required tabindex="4">
+								</div>
+								<div class="row">
+									<div class="col-xs-12 col-sm-6 col-md-6">
+										<div class="form-group">
+											<input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" required tabindex="5">
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-6 col-md-6">
+										<div class="form-group">
+											<input type="password" id="password_confirmation" class="form-control input-lg" placeholder="Confirm Password" required tabindex="6">
+										</div>
+									</div>
+								</div>
+
+
+
+								<div class="row">
+									<div class="col-xs-12 col-sm-6 col-md-6">
+										<div class="form-group">
+											<input type="text" name="skills" id="skills" class="form-control input-lg" placeholder="Skills coma seprated" required tabindex="1">
+										</div>
+									</div>
+
+									<div class="col-xs-12 col-sm-6 col-md-6">
+										<div class="form-group">
+											<input type="text" name="rate" id="rate" class="form-control input-lg" placeholder="Rate /hour" required tabindex="2">
+										</div>
+									</div>
+
+
+									<div class="form-group">
+										<input type="text" name="contactno" id="contact" class="form-control input-lg" placeholder="Contact No" required tabindex="3">
+									</div>
+									<div class="form-group">
+										<input type="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="4">
+									</div>
+									<div class="row">
+										<div class="col-xs-12 col-sm-6 col-md-6">
+											<div class="form-group">
+												<input type="text" required name="country" id="country" class="form-control input-lg" placeholder="Country" tabindex="5">
+											</div>
+										</div>
+										<div class="col-xs-12 col-sm-6 col-md-6">
+
+											<div class="dropdown">
+												<button @*name="catagory"*@ class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
+													Catagory
+													<span class="caret"></span>
+												</button>
+												<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+													<li role="presentation"><a role="menuitem" tabindex="-1">Web Designer</a></li>
+													<li role="presentation"><a role="menuitem" tabindex="-1">Android App Developer</a></li>
+													<li role="presentation"><a role="menuitem" tabindex="-1">Graphic Designer</a></li>
+													<li role="presentation"><a role="menuitem" tabindex="-1">Architect Designer</a></li>
+													<li role="presentation"><a role="menuitem" tabindex="-1">Testers</a></li>
+													<li role="presentation" class="divider"></li>
+													<li role="presentation"><a role="menuitem" tabindex="-1">Others</a></li>
+												</ul>
+											</div>
+
+										</div>
+
+									</div>
+
+
+
+									<div class="col-xs-4 col-sm-3 col-md-3">
+
+										<div class="row">
+											<ul>
+												<li>Choose Picture </li>
+											</ul>
+											<input type="file" name="picture" id="one" />
+										</div>
+
+										@*<div class="funkyradio-info">
+													<input type="checkbox"  id="checkbox6" checked />
+													<label for="checkbox6">Client</label>
+												</div>
+
+											</div>
+											<div class="col-xs-8 col-sm-9 col-md-9">
+												<div class="funkyradio-info">
+													<input type="checkbox"  id="checkbox6" />
+													<label for="checkbox6">Lancer</label>
+												</div>*@
+									</div>
+								</div>
+
+								<hr class="colorgraph">
+								<div class="row">
+									<div onclick="checkEmail()"  class="col-xs-12 col-md-6"><input type="submit"  value="Register" onclick="	Success"  class="btn btn-primary btn-block btn-lg" tabindex="7" >
+									</div>
+
+									<div class="col-xs-12 col-md-6"><a href="#" class="btn btn-success btn-block btn-lg">Sign In</a></div>
+								</div>
+
+
+							</form>
+						</div>
+					</div>
+				</div>
+				<!-- Modal -->
+				</form>
+</body>
+
+
+<script>
+	function checkEmail()
+	{
+
+		var password = document.getElementById('password');
+		var confurm = document.getElementById('password_confirmation');
+
+		
+
+		if (password.Equals(password_confirmation))
+	{
+	
+		}
+		else {
+			alert('Please provide a valid email address');
+		}
+
+}
+	
+
+</script>

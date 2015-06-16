@@ -1,0 +1,131 @@
+﻿@{
+    ViewBag.Title = "Login";
+		Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" type="text/css" href="~/Content/bootstrap/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="~/Content/bootstrap/css/bootstrap.min.css" />
+
+<script type="text/javascript" src="~/Content/jquery/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="~/Content/bootstrap/js/bootstrap.min.js"></script>
+
+
+@*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- Custom CSS -->
+	<link href="css/agency.css" rel="stylesheet">
+	<!-- Custom Fonts -->
+	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+	<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->*@
+
+<body background="~/img/34.jpg">
+<form method="post" action="/LoginndSignup/Logincheck" enctype="multipart/form-data">
+	<div class="container">
+		
+			<h2 class="section-heading">Create A Free Client Account</h2>
+			<h3 class="section-subheading text-muted">Login Client</h3>
+			<div class="row">
+				<div class="span12">
+					<div class="" id="loginModal">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+
+						</div>
+						<div class="modal-body">
+							<div class="well">
+								<ul class="nav nav-tabs">
+									<li class="active"><a href="#login" data-toggle="tab">Login</a></li>
+
+								</ul>
+								<div id="myTabContent" class="tab-content">
+									<div class="tab-pane active in" id="login">
+										<form class="form-horizontal" action='' method="POST">
+											<fieldset>
+												<div id="legend">
+
+												</div>
+												<div class="control-group">
+													<!-- Username -->
+													<label class="control-label" for="username">Username</label>
+													<div class="controls">
+														<input type="text" id="username" required name="eId" placeholder="" class="input-xlarge">
+													</div>
+												</div>
+
+												<div class="control-group">
+													<!-- Password-->
+													<label class="control-label" for="password">Password</label>
+													<div class="controls">
+														<input type="password" id="password" name="pssword"  placeholder="" required class="input-xlarge">
+													</div>
+												</div>
+
+
+												<div class="control-group">
+													<!-- Button -->
+													<div class="controls">
+														<button class="btn btn-success" >Login</button>
+													</div>
+												</div>
+											</fieldset>
+										</form>
+									</div>
+									<div class="tab-pane fade" id="create">
+										<form id="tab">
+											<label>Username</label>
+											<input type="text" value="" class="input-xlarge">
+											<label>First Name</label>
+											<input type="text" value="" class="input-xlarge">
+											<label>Last Name</label>
+											<input type="text" value="" class="input-xlarge">
+											<label>Email</label>
+											<input type="text" value="" class="input-xlarge">
+											<label>Address</label>
+											<textarea value="Smith" rows="3" class="input-xlarge"></textarea>
+
+											<div>
+												<button class="btn btn-primary">Create Account</button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+
+
+</body>
+<script>
+	function funct()
+	{
+		var check = $('username').val();
+		var check1 = $('password').val();
+		if(check.length==0 || check1.length ==0)
+		{
+			//alert('Enter');
+			alert("Please Enter Field");
+		}
+
+	}
+
+	</script>

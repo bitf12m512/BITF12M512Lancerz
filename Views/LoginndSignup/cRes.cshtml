@@ -1,0 +1,99 @@
+﻿@{
+    ViewBag.Title = "cRes";
+		Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@*@model System.Collections.Generic.List<fViews.Models.Response>
+	@using fViews.Models;*@
+
+@using fViews.Models;
+@using System.Collections;
+@model System.Collections.Generic.List<Response>
+
+<link rel="stylesheet" type="text/css" href="~/Content/bootstrap/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="~/Content/bootstrap/css/bootstrap.min.css" />
+
+<script type="text/javascript" src="~/Content/jquery/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="~/Content/bootstrap/js/bootstrap.min.js"></script>
+
+<h2>Hello</h2>
+<html>
+<body background="~/img/Wh.jpg">
+
+	<div class="container">
+<div class="row">
+
+	@foreach (Response data in Model)
+	{
+
+
+		<div class="col-sm-4">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					<h2 class="panel-title">Lancer Name  : @(data.rName)</h2>
+					<ul>
+					<li>
+					<h3 class="panel-title"> Job You Posted : @(data.rJname)</h3>
+						</li>
+							</ul>
+				</div>
+
+				<div class="panel-body">
+
+
+
+					<ul>
+						<li>
+							Lancer Rate : @(data.rRate)
+						</li>
+					</ul>
+
+					<ul>
+						<li>
+							Lancer Duration : @(data.rDuration)
+						</li>
+					</ul>
+
+					<ul>
+						<p>
+							Lancer	 Discription  : @(data.rDiscription)
+						</p>
+					</ul>
+
+
+				</div>
+
+				<div class="panel-footer clearfix">
+					<div class="pull-right">
+						<a href="" class="btn btn-primary">Done</a>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+	
+
+
+
+	}
+	 
+	 </div>
+	 </div>
+	 
+			@*<ul>
+			<li>
+				@(data.rRate)
+				@(data.rDuration)
+
+				</li>
+			</ul>*@
+		
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+﻿@{
+	ViewBag.Title = "AdminLogin";
+}
+
+<body id="page-top" class="index">
+
+
+
+	
+	<div class="col-lg-6">
+		<div class="panel" style="padding-top:40px">
+
+			<form method="post" action="/Admin/alog" enctype="multipart/form-data">
+
+				<div class="container">
+					<div class="panel-heading"><h2>Admin Login</h2></div>
+
+					<div class="panel-body">
+
+						<div class="form-group">
+							<input type="text" name="cFname" id="first_name" class="form-control input-lg" placeholder="Admin Id" tabindex="1">
+						</div>
+
+
+
+
+						<div class="form-group">
+							<input type="password" name="pssword" id="password" class="form-control input-lg" placeholder="Password" tabindex="5">
+						</div>
+
+
+
+						<div class=" btn btn-success btn-block btn-lg"><input type="submit" value="Login" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
+
+						@*<div class="col-xs-12 col-md-6"><a href="#" class="btn btn-success btn-block btn-lg">Sign In</a></div>*@
+
+					</div>
+				</div>
+			</form>
+
+		</div>
+	</div>
+</body>

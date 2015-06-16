@@ -1,0 +1,87 @@
+﻿@{
+    ViewBag.Title = "Details";
+		Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<body>
+
+<div class="container">
+	<h2 class="section-heading">Create A Free Client Account</h2>
+	<h3 class="section-subheading text-muted">Create An Account</h3>
+	<div class="row">
+		<div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+			<form role="form">
+				<h2>Details of Lancer <small></small></h2>
+				<hr class="colorgraph">
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 col-md-6">
+						<div class="form-group">
+							<input type="text" name="Skills" id="skills" class="form-control input-lg" placeholder="Skills coma seprated" tabindex="1">
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-6">
+						<div class="form-group">
+							<input type="text" name="Rate" id="rate" class="form-control input-lg" placeholder="Rate /hour" tabindex="2">
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<input type="text" name="Contact" id="contact" class="form-control input-lg" placeholder="Contact No" tabindex="3">
+				</div>
+				<div class="form-group">
+					<input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="4">
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 col-md-6">
+						<div class="form-group">
+							<input type="password" name="Country" id="country" class="form-control input-lg" placeholder="Country" tabindex="5">
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-6">
+						<div class="dropdown">
+							<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
+								Catagory	
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+								<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Web Designer</a></li>
+								<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Android App Developer</a></li>
+								<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Graphic Designer</a></li>
+								<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Architect Designer</a></li>
+								<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Testers</a></li>
+								<li role="presentation" class="divider"></li>
+								<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Others</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+
+				<hr class="colorgraph">
+				<div class="row">
+					<div class="col-xs-12 col-md-6"><input type="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
+					@*<div class="col-xs-12 col-md-6"><a href="#" class="btn btn-success btn-block btn-lg">Sign In</a></div>*@
+				</div>
+
+
+			</form>
+		</div>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="t_and_c_m" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h4 class="modal-title" id="myModalLabel">Terms & Conditions</h4>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">I Agree</button>
+				</div>
+
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+</div>
+</body>

@@ -1,0 +1,129 @@
+﻿@{
+    ViewBag.Title = "Signup";
+		Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+link rel="stylesheet" type="text/css" href="~/Content/bootstrap/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="~/Content/bootstrap/css/bootstrap.min.css" />
+
+<script type="text/javascript" src="~/Content/jquery/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="~/Content/bootstrap/js/bootstrap.min.js"></script>
+
+
+@*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- Custom CSS -->
+	<link href="css/agency.css" rel="stylesheet">
+	<!-- Custom Fonts -->
+	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+	<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->*@
+
+
+
+
+<body id="page-top" class="index" background="~/img/com.jpg">
+	
+
+
+
+		
+
+			<form method="post" action="/LoginndSignup/Add" enctype="multipart/form-data">
+				<div class="container">
+					<h1></h1>
+					<h2 class="section-heading">Create A Free Client Account</h2>
+					<h3 class="section-subheading text-muted">Create An Account</h3>
+					<div class="row">
+						<div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+							<form role="form">
+								<h2>Please Sign Up <small>It's free and always will be.</small></h2>
+								<hr class="colorgraph">
+								<div class="row">
+									<div class="col-xs-12 col-sm-6 col-md-6">
+										<div class="form-group">
+											<input type="text" name="cFname" id="first_name" class="form-control input-lg" placeholder="First Name" tabindex="1">
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-6 col-md-6">
+										<div class="form-group">
+											<input type="text" name="cLname" id="last_name" class="form-control input-lg" placeholder="Last Name" tabindex="2" required>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<input type="text" name="cDname" id="display_name" class="form-control input-lg" placeholder="Display Name" tabindex="3" required>
+								</div>
+								<div class="form-group">
+									<input type="text" name="eId" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="4" required>
+								</div>
+								<div class="row">
+									<div class="col-xs-12 col-sm-6 col-md-6">
+										<div class="form-group">
+											<input type="password" name="pssword" id="password" class="form-control input-lg" placeholder="Password" tabindex="5" required>
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-6 col-md-6">
+										<div class="form-group">
+											<input type="password" id="password_confirmation" class="form-control input-lg" placeholder="Confirm Password" tabindex="6" required>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-xs-4 col-sm-3 col-md-3">
+
+										@*<div class="funkyradio-info">
+													<input type="checkbox"  id="checkbox6" checked />
+													<label for="checkbox6">Client</label>
+												</div>
+
+											</div>
+											<div class="col-xs-8 col-sm-9 col-md-9">
+												<div class="funkyradio-info">
+													<input type="checkbox"  id="checkbox6" />
+													<label for="checkbox6">Lancer</label>
+												</div>*@
+									</div>
+								</div>
+
+								<hr class="colorgraph">
+								<div class="row">
+								</div>
+								<div class="row">
+									<ul>
+										<li>Choose Picture </li>
+									</ul>
+									<input type="file" name="picture" id="one" />
+								</div>
+								<div class="row">
+								</div>
+								<div class="row">
+									<div class="col-xs-12 col-md-6"><input type="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
+
+									@*<div class="col-xs-12 col-md-6"><a href="#" class="btn btn-success btn-block btn-lg">Sign In</a></div>*@
+								</div>
+
+
+							</form>
+						</div>
+					</div>
+				</div>
+				<!-- Modal -->
+				</form>
+</body>
