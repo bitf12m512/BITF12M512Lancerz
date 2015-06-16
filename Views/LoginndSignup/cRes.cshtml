@@ -17,77 +17,77 @@
 
 <h2>Hello</h2>
 <html>
-<body background="~/img/Wh.jpg">
+<body background="~/Content/img/Wh.jpg">
 
 	<div class="container">
-<div class="row">
+		<div class="row">
 
-	@foreach (Response data in Model)
-	{
+			@foreach (Response data in Model)
+			{
 
 
-		<div class="col-sm-4">
-			<div class="panel panel-success">
-				<div class="panel-heading">
-					<h2 class="panel-title">Lancer Name  : @(data.rName)</h2>
-					<ul>
-					<li>
-					<h3 class="panel-title"> Job You Posted : @(data.rJname)</h3>
-						</li>
+				<div class="col-sm-4">
+					<div class="panel panel-success">
+						<div class="panel-heading">
+							<h2 class="panel-title">Lancer Name  : @(data.rName)</h2>
+							<ul>
+								<li>
+									<h3 class="panel-title"> Job You Posted : @(data.rJname)</h3>
+								</li>
 							</ul>
-				</div>
+						</div>
 
-				<div class="panel-body">
-
-
-
-					<ul>
-						<li>
-							Lancer Rate : @(data.rRate)
-						</li>
-					</ul>
-
-					<ul>
-						<li>
-							Lancer Duration : @(data.rDuration)
-						</li>
-					</ul>
-
-					<ul>
-						<p>
-							Lancer	 Discription  : @(data.rDiscription)
-						</p>
-					</ul>
+						<div class="panel-body">
 
 
-				</div>
 
-				<div class="panel-footer clearfix">
-					<div class="pull-right">
-						<a href="" class="btn btn-primary">Done</a>
+							<ul>
+								<li>
+									Lancer Rate : @(data.rRate)
+								</li>
+							</ul>
+
+							<ul>
+								<li>
+									Lancer Duration : @(data.rDuration)
+								</li>
+							</ul>
+
+							<ul>
+								<p>
+									Lancer	 Discription  : @(data.rDiscription)
+								</p>
+							</ul>
+
+
+						</div>
+
+						<div class="panel-footer clearfix">
+							<div class="pull-right">
+								<a href="" class="btn btn-primary">Done</a>
+
+							</div>
+						</div>
 
 					</div>
 				</div>
 
-			</div>
+
+
+
+			}
+
 		</div>
-	
+	</div>
 
+	@*<ul>
+		<li>
+			@(data.rRate)
+			@(data.rDuration)
 
+			</li>
+		</ul>*@
 
-	}
-	 
-	 </div>
-	 </div>
-	 
-			@*<ul>
-			<li>
-				@(data.rRate)
-				@(data.rDuration)
-
-				</li>
-			</ul>*@
-		
 
 
 

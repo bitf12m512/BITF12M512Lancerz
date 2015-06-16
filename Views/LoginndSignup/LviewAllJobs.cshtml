@@ -11,70 +11,70 @@
 <script type="text/javascript" src="~/Content/bootstrap/js/bootstrap.min.js"></script>
 
 <html>
-<body background="~/Wh.jpg">
+<body background="~/Content/Wh.jpg">
 
 	<h2>Hello</h2>
-	
+
 	<div class="container">
 
-<div class="row">
+		<div class="row">
 
-	@foreach (Job data in ViewData.Model)
-	{
+			@foreach (Job data in ViewData.Model)
+			{
 
-		<div class="col-sm-4">
-			<div class="panel panel-primary">
-				<div class="panel-heading">
-					<h3 class="panel-title">@(data.jName)</h3>
-				</div>
+				<div class="col-sm-4">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<h3 class="panel-title">@(data.jName)</h3>
+						</div>
 
-				<div class="panel-body">
-					<ul>
-						<li>
-							Posted By : @(data.jPosterName)
-						</li>
-					</ul>
+						<div class="panel-body">
+							<ul>
+								<li>
+									Posted By : @(data.jPosterName)
+								</li>
+							</ul>
 
-					<ul>
-						<li>
-							Rate : @(data.jRate)
-						</li>
-					</ul>
+							<ul>
+								<li>
+									Rate : @(data.jRate)
+								</li>
+							</ul>
 
-					<ul>
-						<li>
-							Duration : @(data.jDuration)
-						</li>
-					</ul>
+							<ul>
+								<li>
+									Duration : @(data.jDuration)
+								</li>
+							</ul>
 
-					<ul>
-						<p>
-							Discription  : @(data.jDiscription)
-						</p>
-					</ul>
+							<ul>
+								<p>
+									Discription  : @(data.jDiscription)
+								</p>
+							</ul>
 
 
-				</div>
+						</div>
 
-				<div class="panel-footer clearfix">
-					<div class="pull-right">
-						<a href="/LoginndSignup/Bid" class="btn btn-primary">Bid Now</a>
+						<div class="panel-footer clearfix">
+							<div class="pull-right">
+								<a href="/LoginndSignup/Bid" class="btn btn-primary">Bid Now</a>
+
+							</div>
+						</div>
 
 					</div>
 				</div>
 
-			</div>
+
+
+
+			}
+
 		</div>
 
 
-
-
-	}
-
 	</div>
 
-
-	</div>
-
-	</body>
+</body>
 </html>
