@@ -88,10 +88,29 @@
 						<li class="hidden">
 							<a href="#page-top"></a>
 						</li>
-						<li>
-							<a class="page-scroll" href="/BrowsendProfiles/Browse">@c.cDname</a>
-							
+						
+							@*<a class="page-scroll" href="/BrowsendProfiles/Browse">@c.cDname</a>*@
+							@if (Session["mysession"] != null)
+			 { 
+				<li>
+												<li>
+													<a class="page-scroll" href="/BrowsendProfiles/Browse">@c.cDname</a>
+							</li>
+								
+						
+								<li>
+
+
+									<ul>
+										<li role="presentation"><a class="btn btn-danger" role="menuitem" tabindex="-1" href="/LoginndSignup/DestroySession">Logout</a></li>
+									</ul>
+								</li>
 						</li>
+			 }
+						
+							
+
+						
 
 						<li>
 							<a class="page-scroll" href="/BrowsendProfiles/Browse">@l.lDname</a>
